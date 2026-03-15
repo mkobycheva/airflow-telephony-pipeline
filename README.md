@@ -14,9 +14,12 @@ This pipeline automates the extraction, enrichment, and loading of support call 
 
 ## ☎️ Data
 - JSON telephony files `telephony_json` consist of **100 JSONS for each call** can be found in `include` folder
-- DuckDB database is attached in `include` folder as well; here are my queries:
+- DuckDB database is attached in `include` folder as well. Here are my queries:
 <img src="./images/image5.png" width="500" />
-- MySQL queries for table creation are also added to the repo: `airflow_mysql_table creation.sql`. I create 2 tables: `calls` with **100 entries** and `employees` with **50 rows**.
+
+- MySQL queries for table creation are also added to the repo: `airflow_mysql_table creation.sql`.
+
+I created 2 tables: `calls` with **100 entries** and `employees` with **50 rows**.
   
 ---
 
