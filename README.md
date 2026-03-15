@@ -12,11 +12,11 @@ This pipeline automates the extraction, enrichment, and loading of support call 
 
 ---
 
-## Data
+## ☎️ Data
 - JSON telephony files can be found in `include` folder
 - DuckDB database is attached in `include` folder as well; here are my queries:
 <img src="./images/image5.png" width="500" />
-- MySQL queries for table creation are also added to the repo
+- MySQL queries for table creation are also added to the repo: `airflow_mysql_table creation.sql`
   
 ---
 
@@ -27,7 +27,7 @@ This pipeline automates the extraction, enrichment, and loading of support call 
 
 ---
 
-## Dag in Airflow UI
+## 💡 Dag in Airflow UI
 ### Here i am showing how my DAG runs look in Airflow :)
 
 ![alt text](./images/image1.png)
