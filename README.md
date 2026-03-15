@@ -12,6 +12,14 @@ This pipeline automates the extraction, enrichment, and loading of support call 
 
 ---
 
+## Data
+- JSON telephony files can be found in `include` folder
+- DuckDB database is attached in `include` folder as well; here are my queries:
+<img src="./images/image5.png" width="500" />
+- MySQL queries for table creation are also added to the repo
+  
+---
+
 ## 🏗 DAG Structure
 1. **`detect_new_calls`**: Queries MySQL for calls where `call_time > last_processed_watermark`. Since i only simulated new calls and they were actually all in my table, i had to set an upper limit for calls as well: `call_time < watermark + 1`. IDs are pushed using XComs.
 2. **`load_telephony_details`**: Dynamically reads JSON files for the detected call IDs.
@@ -19,3 +27,20 @@ This pipeline automates the extraction, enrichment, and loading of support call 
 
 ---
 
+## Dag in Airflow UI
+### Here i am showing how my DAG runs look in Airflow :)
+
+![alt text](./images/image1.png)
+
+### Example of logs after a DAG run:
+
+![alt text](./images/image2.png)
+
+### My connections to MySQL and DuckDB:
+
+![alt text](./images/image3.png)
+
+---
+
+## Final table in DuckDB
+![alt text](./images/image4.png)
